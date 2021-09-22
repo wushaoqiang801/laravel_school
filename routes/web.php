@@ -12,10 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    return view('welcome');
+    echo 123;
 });
 
 ///app/public/login/test
 //Route::get('/test','LoginController@test');
 
-\Illuminate\Support\Facades\Route::get('/test','LoginController@test');
+
