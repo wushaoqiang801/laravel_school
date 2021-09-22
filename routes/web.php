@@ -16,4 +16,6 @@ Route::get('/', function () {
 });
 
 ///app/public/login/test
-Route::get('/test','LoginController@test');
+//Route::get('/test','LoginController@test');
+
+\Illuminate\Support\Facades\Route::get('/test','LoginController@test');
