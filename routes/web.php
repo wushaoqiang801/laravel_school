@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 ///app/public/login/test
-Route::post('/test','LoginController@test');
+Route::get('/test','LoginController@test');
 
 
