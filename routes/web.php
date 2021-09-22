@@ -11,12 +11,11 @@
 |
 */
 
-Route::post('/', function () {
-//    return view('welcome');
-    echo 123;
+Route::get('/', function () {
+    return view('welcome');
 });
 
 ///app/public/login/test
-//Route::get('/test','LoginController@test');
+Route::post('/test','LoginController@test');
 
 
