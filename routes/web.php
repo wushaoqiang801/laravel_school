@@ -11,9 +11,9 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
 
 ///app/public/login/test
-Route::get('/','LoginController@test');
+Route::get('/test','LoginController@test');
