@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
-
+//    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => getenv('IS_IN_HEROKU') ? 'pgsql' : env('DB_CONNECTION', 'mysql'),
     /*
     |--------------------------------------------------------------------------
     | Database Connections
@@ -56,16 +56,29 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => 'ec2-44-198-223-154',
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => 'd11q3vc5u6pkvr',
+            'username' => 'bcvvxpgtambvhr',
+            'password' => '95228d29c0dbc7a90378a0b4888e0ba4277c45dd04221a5b17887ba180852bc2',
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
+
+//        'pgsql' => [
+//            'driver' => 'pgsql',
+//            'host' => env('DB_HOST', '127.0.0.1'),
+//            'port' => env('DB_PORT', '5432'),
+//            'database' => env('DB_DATABASE', 'forge'),
+//            'username' => env('DB_USERNAME', 'forge'),
+//            'password' => env('DB_PASSWORD', ''),
+//            'charset' => 'utf8',
+//            'prefix' => '',
+//            'schema' => 'public',
+//            'sslmode' => 'prefer',
+//        ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
